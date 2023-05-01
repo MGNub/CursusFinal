@@ -360,6 +360,7 @@ h1 {
   background : url("https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-674010.jpg&fm=jpg");
   background-size : 150%;
   height : fit-contenm;
+  padding-bottom : 8rem;
 }
 
 #fadeTransition {
@@ -411,13 +412,6 @@ table a {
 td p {
   width : calc(100% - 5rem);
   margin : 0 1rem 0 1rem;
-}
-
-#footer {
-  background-color : rgba(0, 0, 0, 0.7);
-  margin-top : 10rem;
-  width : 100vw;
-  height : 15rem;
 }
 
 /*classes for text animations*/
