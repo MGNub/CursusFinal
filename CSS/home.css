@@ -139,6 +139,7 @@ h1 div {
   margin-right: 15px;
   animation : spin2 1.7s;
   border-radius : 50%;
+  background-color : rgb(20, 20, 20);
 }
 
 h1 div:hover {
