@@ -163,7 +163,7 @@ p {
   position: relative;
   top: 0;
   padding: 25px 80px 25px 80px;
-  background-color: rgb(224, 228, 0);
+  background : linear-gradient(to right, rgb(224, 228, 0), rgb(214, 111, 0), rgb(223, 140, 16), rgb(224, 228, 0) 95%);
   border-radius : 40px;
   border : solid;
   border-width : 4px;
@@ -172,15 +172,43 @@ p {
   font-weight : bolder;
   box-shadow : 0px 3px 8px rgb(181, 201, 2);
   cursor : pointer;
+  transition : all 0.7s ease-in-out;
+  background-size: 200% 100%;
 }
 
 #join:hover {
-  background-color : yellow;
-  transition : 0.3s;
+  background-position : 100% 0;
+}
+
+#join p {
+  padding : 0;
+  margin : 0;
+  height : fit-content;
+  width : fit-content;
+  font-weight : 600;
+  color : rgb(72, 29, 0);
+}
+
+#join:hover p {
+  animation : btn 0.7s;
 }
 
 @keyframes btn {
-  
+  0% {
+    transform : translateY(0)
+  }
+  33% {
+    color : red;
+  }
+  40% {
+    transform : translateY(-100%);
+    opacity : 0;
+    color : red;
+  }
+  45% {
+    transform : translateY(100%);
+    opacity : 0;
+  }
 }
 
 #fade {
@@ -278,35 +306,3 @@ video {
   }
 
 }
-
-/*mouseshadow*/
-#area {
-    position : absolute;
-    background-color : red;
-    height : 300px;
-    aspect-ratio : 1;
-    left : 50%;
-    top : 50%;
-    translate : -50% -50%;
-    border-radius : 50%;
-    background : linear-gradient(to right, aquamarine, mediumpurple);
-    animation : rotate 20s infinite;
-    filter : blur(200px);
-    z-index : 101;
-    pointer-events : none;
-
-    @keyframes rotate {
-        from {
-            rotate : 0deg;
-        }
-
-        50% {
-            scale : 1 1.5;
-        }
-
-        to {
-            rotate : 360deg;
-        }
-    }
-}
-
