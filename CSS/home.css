@@ -132,17 +132,21 @@ p {
 }
 
 #bigLogo:hover {
-  
+  animation : spin 1s infinite;
 }
 
 @keyframes logoLoad {
   0% {
     height : 130px;
+    pointer-events : none;
 
   }
   50% {
     height : 130px;
-
+    pointer-events : none;
+  }
+  100% {
+    pointer-events : none;
   }
 }
 
