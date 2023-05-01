@@ -57,6 +57,7 @@ body {
     left : 50%;
     transform : translateX(-100%) translateY(-45%);
     opacity : 0;
+    pointer-events : none;
   }
   10% {
     transform : translateX(-55%) translateY(-45%);
@@ -70,6 +71,9 @@ body {
   }
   50% {
     transform : translateX(-60%) translateY(-45%);
+  }
+  100% {
+    pointer-events : none;
   }
 }
 
@@ -124,15 +128,35 @@ p {
   margin : 0 0 2rem;
 }
 
+h1 div {
+  padding : 0;
+  margin : 0;
+  height : fit-content;
+  width : fit-content;
+  display : flex;
+  justify-content : center;
+  align-items : center;
+  margin-right: 15px;
+  animation : spin2 1.7s;
+}
+
+h1 div:hover {
+  animation : spin2 1s infinite;
+}
+
+@keyframes spin2 {
+  0% {
+    transform : rotate(0deg);
+  }
+  100% {
+    transform : rotate(360deg);
+  }
+}
+
 #bigLogo {
   position: relative;
   height: 60px;
-  margin-right: 20px;
   animation : logoLoad 5s;
-}
-
-#bigLogo:hover {
-  animation : spin 1s infinite;
 }
 
 @keyframes logoLoad {
