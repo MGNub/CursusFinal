@@ -113,10 +113,16 @@ body {
   background-repeat: no-repeat;
 }
 
+.section2 h1 {
+  font-size : 2.8rem;
+}
+
 .section2 h2 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   padding: 2rem 0 2rem;
   text-align: center;
+  margin : 0.5rem;
+  padding-bottom : 0.5rem;
 }
 
 .section2 p {
@@ -168,19 +174,25 @@ body {
 
 /*Section2 - Carousel*/
 /*Section 3*/
-.section3 {}
+.section3 {
+  display : flex;
+  flex-direction : column;
+  align-items : center;
+  padding : 2rem 0 2rem 0;
+}
 
-.section3 h2,
-p {
+.section3 h2, p {
   text-align: center;
 }
 
 .section3 p {
   font-size: 1.5rem;
+  width : 80%;
 }
 
 .section3 h2 {
   font-size: 2.5rem;
+  margin-bottom : 1rem;
 }
 
 /*Section 4 - Icons w/ Text*/
