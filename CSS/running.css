@@ -252,7 +252,7 @@ body {
 }
 
 .bubble3 {
-  background : url("/Images/runningshoes.png");
+  background : url("https://mgnub.github.io/CursusFinal/Images/runningshoes.png");
   background-position : center;
   background-size : 110%;
   background-repeat : no-repeat;
