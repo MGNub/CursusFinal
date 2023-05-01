@@ -1,0 +1,35 @@
+body {
+  background : linear-gradient(to right, lightgreen, lightblue, orange, lightyellow);
+}
+
+h1{
+  position : absolute;
+}
+
+.horizontal-menu {
+  display: flex;
+  margin-left : 65%;
+  width: 33%;
+  justify-content: flex-start;
+  position: fixed;  
+}
+
+.horizontal-menu a {
+  background-color: #eee;
+  color: black;
+  font-size : 18px;
+  padding: 8px;
+  text-decoration: none;
+  flex: 1; /* Set equal width to all links */
+  text-align: center; /* Center the text in the links */
+}
+
+.horizontal-menu a:hover {
+  background-color: transparent;
+  transition-duration: 600ms;
+}
+
+.horizontal-menu a.active {
+  background-color: #04AA6D;
+  color: white;
+}

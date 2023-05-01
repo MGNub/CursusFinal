@@ -1,0 +1,312 @@
+body {
+  width : 1000vw;
+  overflow : hidden;
+  cursor: e-resize;
+}
+
+/* YOUXI YOUXI THIS IS WHAT I CHANGED IF YOU GONNA GO MAD*/
+* {
+  background-repeat: no-repeat;
+}
+/* */
+::-webkit-scrollbar {
+  height : 5px;
+  background-color : rgb(20, 20, 20);
+}
+
+::-webkit-scrollbar-thumb {
+  background : rgb(105, 105, 105);
+  border-radius : 100px;
+}
+
+#fade {
+  position : fixed;
+  background : linear-gradient(0deg, transparent, transparent 85%, black);
+  padding-left : 100%;
+  padding-bottom : 100%;
+  top : 0;
+  left : 0;
+  z-index : 1;
+  pointer-events : none;
+}
+
+#routes {
+  position : absolute;
+  top : 0;
+  left : 0;
+  display : flex;
+  flex-direction : row;
+  width : 100vw;
+  overflow : scroll;
+  flex-flow: row nowrap;
+}
+
+.route {
+  height : 100vh;
+  margin-top : 1vh;
+  min-width : 100vw;
+  display : flex;
+  justify-content : left;
+  align-items : center;
+  color : white;
+  background-size : cover;
+  background-position : center;
+  background-blend-mode : overlay;
+  background-color : rgba(0, 0, 0, 0.05);
+  scroll-snap-align : center;
+}
+
+.hold {
+  background: rgba(255,255,255,0.3);
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1);
+}
+
+.text {
+  height : fit-content;
+  width : 30rem;
+  font-size : 1.5rem;
+  background-color : rgba(0, 0, 0, 0.5);
+  padding : 2rem;
+  opacity : 0;
+  transition: transform, opacity, 1s;
+}
+
+.text:hover {
+  background-color : rgba(0, 0, 0, 0.8);
+  padding : 3rem 4rem 3rem 2rem;
+  cursor : pointer;
+  transition-duration : 0.3s;
+}
+
+.show {
+  transform: translate(20%, 0%);
+  opacity: 1;
+}
+
+.text h2 {
+  font-size : 2.5rem;
+  line-height : 0;
+}
+
+#route1 {
+  background-image : url("https://i.natgeofe.com/n/ad6a8ba9-414f-4f94-8d03-2387f1dbb1dd/philadelphia-travel.jpg?w=2880&h=1916");
+  object-fit: fill;
+}
+
+#route2 {
+  background-image : url("https://www.visitphilly.com/wp-content/uploads/2018/02/Schuylkill-Banks-Boardwalk-nighttime-skyline-m-edlow-2200VP.jpg");
+}
+
+#route3 {
+  background-image : url("https://myphillypark.org/app/uploads/2022/08/IMG_6188_web.jpg");
+}
+
+#route4 {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/95/BenjaminFranklinBridgeAtNight2.jpg");
+}
+
+#route5 {
+  background-image: url("https://www.visitphilly.com/wp-content/uploads/2017/12/BartramsGarden_R_Kennedy_10_2200x1237.jpg");
+}
+
+#route6 {
+  background-image: url("https://images.squarespace-cdn.com/content/v1/5a1b65dbc027d86156388afb/1605906082387-3UUD0BEBFL4V5C7812BB/97603435_4132742060130162_266925701981011968_o.jpg?format=1500w");
+}
+
+#route7 {
+  background-image: url("https://images.fineartamerica.com/images-medium-large-5/philadelphias-rock-tunnel-kelly-drive-bill-cannon.jpg");
+}
+
+#route8 {
+  background-image: url("https://myphillypark.org/app/uploads/2017/12/One-Fairmount-Park-Conservancy-drone-photo.jpg");
+}
+
+.fades {
+  position : absolute;
+  height : 100vh;
+  width : 20vw;
+  background : linear-gradient(to right, transparent, rgba(0,0,0,0.6), rgba(10,10,10,1),rgba(0,0,0,0.6), transparent);
+}
+
+#fade1 {
+  left : 90vw;
+}
+
+#fade2 {
+  left : 190vw;
+}
+
+#fade3 {
+  left : 290vw;
+}
+
+#fade4 {
+  left : 390vw;
+}
+
+#fade5 {
+  left : 490vw;
+}
+
+#fade6 {
+  left : 590vw;
+}
+
+#fade7 {
+  left : 690vw;
+}
+
+#fade8 {
+  width : 10vw;
+  left : 790vw;
+  background : linear-gradient(to right, transparent, rgba(0,0,0,0.5), black);
+}
+
+/*Arrow*/
+#bottomFade {
+  background : linear-gradient(to top, black, transparent);
+  width : 100vw;
+  position : fixed;
+  bottom : 0;
+  left : 0;
+  display : flex;
+  justify-content : center;
+  pointer-events : none;
+}
+
+#dragText {
+  position : absolute;
+  color : white;
+  font-size : 2.5rem;
+  bottom : 1.7rem;
+  transform : scaleX(100%) scaleY(100%);
+  animation : drag 1.8s;
+  opacity : 1;
+}
+
+.fade-out {
+  transition: color 0.5s ease-out;
+}
+
+@keyframes drag{
+  0% {
+    transform : scaleX(1%) scaleY(1%);
+  }
+  70%{
+    transform : scaleX(1%) scaleY(1%);
+  }
+  100% {
+    transform : scaleX(100%) scaleY(100%);
+  }
+}
+
+#arrow {
+  display : flex;
+  align-items : center;
+  bottom : 0;
+  animation : arrow 1.5s;
+}
+
+@keyframes arrow {
+  0% {
+    opacity : 0;
+    transform : translateY(-50%);
+  }
+  50% {
+    transform : translateY(-50%);
+    opacity : 1;
+  }
+}
+
+#crystal {
+  opacity : 0;
+  animation : crystal 2s;
+}
+
+@keyframes crystal {
+  0% {
+    opacity : 1;
+  }
+  50% {
+    opacity : 1;
+  }
+  100% {
+    opacity : 0;
+  }
+}
+
+#arrow1 {
+  height : 30px;
+  margin-right : 10px;
+  animation : leftArrow 1s;
+}
+
+#arrow2 {
+  height : 30px;
+  transform : rotate(180deg);
+  margin-left : 10px;
+  animation : rightArrow 1s;
+}
+
+@keyframes leftArrow {
+  0% {
+    opacity : 0;
+    transform : translateX(500px);
+  }
+  25%{
+    opacity : 0;
+  }
+  100% {
+    opacity : 1;
+    transform : translateX(0%);
+  }
+}
+
+@keyframes rightArrow {
+  0% {
+    opacity : 0;
+    transform : translateX(-500px) rotate(180deg);
+  }
+  25%{
+    opacity : 0;
+  }
+  100% {
+    opacity : 1;
+    transform : translateX(0%) rotate(180deg);
+  }
+}
+
+
+.line {
+  width : 30vw;
+  stroke-dasharray : 308;
+  animation : 1.4s fillSvg linear;
+  opacity : 1;
+}
+
+.line1 {
+  transform : rotate(180deg);
+}
+
+@keyframes fillSvg {
+  0%{
+    stroke-dashoffset : 308;
+    opacity : 0;
+  }
+  60% {
+    stroke-dashoffset : 308;
+  }
+  100% {
+    stroke-dashoffset : 0;
+    opacity : 1;
+  }
+}
+/*Arrow*/
+
+@media (max-width: 600px) {
+  .text {
+    transform: translateX(0%);
+  }
+}

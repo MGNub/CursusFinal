@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cursus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--link rel="stylesheet" href="/CSS/menu.css"-->
+  <link rel="stylesheet" href="/CSS/reason.css">
+  <link rel="icon" href="/Images/logoTemplate.png">
+</head>
+
+<body>
+  <header id="top-bar">
+    <a href="index.html" id="title"><img id="smallLogo" src="/Images/logoTemplate.png">Cursus</a>
+    <div class="horizontal-menu">
+      <a href="index.html">Home</a>
+      <a href="running.html" class="active">Why Run?</a>
+      <span>
+        <ul>
+          <li><a>Explore</a>
+            <ul>
+              <li><a href="routes.html" id="ok">Routes</a></li>
+              <li><a href="clubs.html" id="ok">Clubs</a></li>
+              <li><a href="events.html" id="ok">Events</a></li>
+            </ul>
+          </li>
+        </ul>
+      </span>
+    </div>
+  </header>
+  <p id="topic1">Why Should I Run?</p>
+  <p id="slide">
+    <−Drag to Find Out−>
+  </p>
+  <div class="carousel">
+    <a class="carousel-item" href="#">
+      <div class="card">
+        <div class="box1">Physical health</div>
+        <div class="main-text">
+          <p>Running is a great way to improve cardiovascular health, strengthen muscles and bones, and boost the immune system. It can also help with weight management and reducing the risk of chronic diseases such as diabetes, heart disease, and cancer.</p>
+        </div>
+      </div>
+    </a>
+    <a class="carousel-item" href="#">
+      <div class="card">
+        <div class="box1">Mental health</div>
+        <div class="main-text">
+          <p>Running has been shown to reduce stress and anxiety, improve mood, and boost self-esteem. It can also help alleviate symptoms of depression and improve overall cognitive function.</p>
+        </div>
+      </div>
+    </a>
+    <a class="carousel-item" href="#">
+      <div class="card">
+        <div class="box1">Social connection</div>
+        <div class="main-text">
+          <p>Running can be a great way to connect with other people who share your interests. Whether it's through running clubs, group runs, or online communities, running can provide a sense of community and support.</p>
+        </div>
+      </div>
+    </a>
+    <a class="carousel-item" href="#">
+      <div class="card">
+        <div class="box1">Personal challenge</div>
+        <div class="main-text">
+          <p>Many people enjoy the challenge of setting and achieving running goals, whether it's running a certain distance or time, completing a race, or improving overall fitness.</p>
+        </div>
+      </div>
+    </a>
+    <a class="carousel-item" href="#">
+      <div class="card">
+        <div class="box1">Enjoyment of the activity</div>
+        <div class="main-text">
+          <p>Finally, some people simply enjoy the act of running. Whether it's the feeling of moving your body, being outdoors, or the sense of accomplishment after a run, running can be a fulfilling and enjoyable activity for many people.</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  </div>
+  <div id="parent">
+    <img class="runner" src="/Images/runners.jpeg">
+    <img class="start" class="runner" src="/Images/start.png">
+  </div>
+  <div class = "container">
+            <div class = "box">
+                <div class = "bubble bubble1"></div>
+                <p class = "desc rightDesc">Remember to stay hydrated! It is important to stay hydrated while running. Make sure you drink enough water before, during, and after your run.</p>
+            </div>
+        </div>
+        <div class = "container">
+            <div class = "box box2">
+                <p class = "desc leftDesc">Wearing the right clothing and shoes can make a big difference in your comfort level while running. Make sure you have comfortable and breathable clothing and proper running shoes.</p>
+                <div class = "bubble bubble2"></div>
+            </div>
+        </div>
+
+        <div class = "container">
+            <div class = "box">
+                <div class = "bubble"></div>
+                <p class = "desc rightDesc">Warm up before running: Before you start running, it is important to warm up your muscles. You can do this by doing some light exercises like walking or jogging slowly.</p>
+            </div>
+        </div>
+  <script src="/JAVASCRIPT/reason.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.carousel').carousel();
+    });
+  </script>
+</body>
+
+</html>
+<!-- source code for the carousel https://www.divinectorweb.com/2023/02/materialize-css-testimonial-slider.html and addition help from ChatGPT -->

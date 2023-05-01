@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/training.css">
+
+</head>
+<body>
+    <input type='text' id='input' oninput= 'edit_change()'>
+    <table id= 'roster'>
+        <tr>
+            <th>Week#</th>
+            <th>Easy Day (1)</th>
+            <th>Hard Day* (1)</th>
+            <th>Easy Day (2)</th>
+            <th>Long Run</th>
+            <th>Easy Day (3)</th>
+            <th>Hard Day* (2)</th>
+            <th>Approximate Weekly Mileage</th>
+            <th>Date</th>
+            <th>Goal Max Mileage</th>
+        </tr>
+        <tr>
+            <td onclick='edit_item(this.id)' id='item1'>grade</td>
+            <td onclick='edit_item(this.id)' id='item2'>attendance</td>
+            <td onclick='edit_item(this.id)' id='item3'></td>
+            <td onclick='edit_item(this.id)' id='item4'></td>
+        </tr>
+
+    </table>
+    <button onclick='add_current()'>add student</button>
+    <button onclick='delete_current()'>delete student</button>
+    <script src="/JAVASCRIPT/training.js"></script>
+</body>
+</html>

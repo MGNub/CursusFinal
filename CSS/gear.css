@@ -1,0 +1,549 @@
+:root {
+  --bg-color: rgb(20, 20, 20);
+  --bg-color2: rgb(50, 55, 65);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: white;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+  background-color: rgb(20, 20, 20);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(105, 105, 105);
+  border-radius: 100px;
+}
+
+/*PAGES*/
+.page {
+  z-index: 1100 !important;
+  height: 100vh;
+  width: 100vw;
+}
+
+.back {
+  position: fixed;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 600;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 3rem;
+  margin: 1rem 0 0 0;
+  text-align: center;
+}
+
+.circle {
+  position: absolute;
+  height: 230vh;
+  width: 120vw;
+  left: -10vw;
+  top: -75vh;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1.2s;
+}
+
+/*PAGES^/
+
+/*SHOE PAGE*/
+.circle1 {
+  background-color: var(--bg-color2);
+  transform: translateX(-100%) translateY(-100%);
+  opacity: 0;
+}
+
+.shoePage {
+  position: absolute;
+  background-color: var(--bg-color2);
+  overflow-y: scroll;
+}
+
+.shoePage p {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1.3rem;
+  width: 70%;
+}
+
+.shoePage img {
+  width: 50vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  border: solid 1px white;
+}
+
+.shoePage a {
+  color: rgb(88, 88, 255);
+}
+
+.shoePage h3 {
+  margin-top: 5rem;
+}
+
+/*SHOE PAGE*/
+/*CLOTHES PAGE*/
+.circle2 {
+  background-color: var(--bg-color2);
+  transform: translateX(100%) translateY(-100%);
+  opacity: 0;
+}
+
+.clothesPage {
+  position: absolute;
+  background-color: var(--bg-color2);
+  overflow-x: scroll;
+}
+
+#heading {
+  display: flex;
+}
+
+#clothesContainer {
+  position: absolute;
+  top: 0;
+  background-color: rgb(0, 102, 0);
+  height: 100vh;
+  width: 400vw;
+  display: flex;
+}
+
+.clothes {
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.1) !important;
+  background-position: center !important;
+  display: flex;
+  justify-content: center;
+}
+
+.clothesText {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: solid 2px white;
+  border-image: linear-gradient(to left, rgb(132, 184, 50) 30%, rgb(156, 255, 64), rgb(252, 255, 87)) 1;
+  padding: 2rem;
+  width: 55vw;
+  height: 13rem;
+  text-align: center;
+}
+
+.clothesText p {
+  font-size: 1.3rem;
+}
+
+.clothes1 {
+  background: url("https://static.nike.com/a/images/w_1920,c_limit/3197962b-884d-453b-b8cd-897df77aba1f/what-to-wear-running-in-different-temperatures.jpg");
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.clothes2 {
+  background: url("https://static01.nyt.com/images/2020/11/22/multimedia/22ah-winterrunning/22ah-winterrunning-superJumbo.jpg");
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.clothes3 {
+  background: url("https://kdhevents.com/wp-content/uploads/2017/12/outdoor-living.jpg");
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.clothes4 {
+  background: url("https://cdn.fleetfeet.com/assets/Blog/Post-Images/Spring-Training.jpeg/dynamic:1-aspect:1.5005359056806-fit:cover-strategy:entropy/Spring-Training--1440.jpg");
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.scroll-down {
+  position: fixed;
+  z-index: 10000;
+  top: 150vh;
+  left: 102vw;
+}
+
+.scroll-down i {
+  display: block;
+  padding: 12px;
+  font-size: 25px;
+  color: black;
+  background: rgba(71, 92, 102, 0.7);
+  border-radius: 30px;
+  transition: all .50s ease;
+}
+
+.scroll-down a {
+  text-decoration: none;
+}
+
+/*CLOTHES PAGE*/
+/*SOCKS PAGE*/
+.circle3 {
+  background-color: var(--bg-color2);
+  transform: translateX(-100%) translateY(100%);
+  opacity: 0;
+}
+
+.socksPage {
+  position: absolute;
+  background-color: var(--bg-color2);
+  overflow: hidden;
+}
+
+.socksPage h3 {
+  margin-top: 5rem;
+}
+
+.socksPage p {
+  margin-bottom: 0;
+}
+
+/*SOCKS PAGE*/
+/*ACCESSORIES PAGE*/
+.circle4 {
+  background-color: var(--bg-color2);
+  transform: translateX(100%) translateY(100%);
+  opacity: 0;
+}
+
+.accessoriesPage {
+  position: absolute;
+  background-color: rgb(0, 4, 20);
+  overflow: hidden;
+}
+
+#trackBar {
+  height: 5px;
+  width: 100%;
+  background-color: rgb(0, 162, 255);
+  box-shadow: 0 0 10px rgb(0, 162, 255);
+  margin: 6vh 0 0 0;
+}
+
+#trackBar2 {
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background-color: rgb(0, 162, 255);
+  box-shadow: 0 0 10px rgb(0, 162, 255);
+  margin: 6vh 0 0 0;
+  bottom: 17vh;
+}
+
+.socksPage p {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1.3rem;
+  width: 70%;
+}
+
+.socksPage img {
+  width: 50vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  border: solid 1px white;
+  top: 4rem;
+}
+
+/*Gallery*/
+#image-track>.image {
+  width: 50vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: center;
+}
+
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.image+p {
+  position: fixed;
+  top: -25vh;
+  left: -50vw;
+  font-size: 1.6rem;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.7);
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.image p {
+  transition-duration: 0.6s;
+  opacity: 1;
+}
+
+
+/*ACCESSORIES PAGE*/
+.expand {
+  opacity: 1;
+  transform: translateX(0vw) translateY(0);
+  z-index: 1000;
+  pointer-events: all;
+}
+
+
+/*NAV PAGE*/
+#sections {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  align-items: center;
+  overflow-anchor: none;
+}
+
+.center {
+  height: 30vh;
+  width: 35rem;
+  padding: 0 2.5rem 0 2.5rem;
+  background-color: rgba(20, 20, 20, 0.9);
+  position: absolute;
+  border: solid 1px white;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  animation: centerLoad 0.4s ease-out;
+  border-radius: 300px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.center h1 {
+  line-height: 0.7;
+}
+
+#centerText {
+  position: relative;
+  margin-top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+#centerText p {
+  font-size: 1.2rem;
+}
+
+@keyframes centerLoad {
+  from {
+    opacity: 0;
+    filter: hue-rotate(180deg);
+    transform: translateX(-50%) translateY(-50%) scale(0.1);
+  }
+
+  to {
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+}
+
+.grid {
+  height: 90vh;
+  width: 100vw;
+  display: grid;
+  gap: 1px;
+  grid-template-areas:
+    'Gear1 Gear2'
+    'Gear3 Gear4';
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  --stagger-delay: 130ms;
+}
+
+@keyframes cardLoad {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+    /* pointer-events : none; */
+  }
+
+  80% {
+    opacity: 1;
+    transform: scale(1);
+    /* pointer-events : none; */
+  }
+
+  100% {
+    /* pointer-events : none; */
+  }
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  animation: cardLoad 0.8s ease-out;
+  animation-fill-mode: backwards;
+  border: white;
+  border-style: none solid solid solid;
+  border-width: 1px;
+  background-blend-mode: overlay;
+  background-position: center !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.card h2 {
+  font-size: 2.5rem;
+}
+
+.card {
+  background-repeat: no-repeat !important;
+}
+
+.card:nth-child(1) {
+  grid-area: Gear1;
+  background: url("https://us.123rf.com/450wm/pavelshlykov/pavelshlykov2301/pavelshlykov230100563/197145886-close-up-low-angle-view-of-running-shoes-with-while-soles-on-an-empty-road-as-the-sun-highlights-the.jpg?ver=6");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation-delay: calc(2 * var(--stagger-delay));
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card:nth-child(2) {
+  grid-area: Gear2;
+  background: url("https://media.istockphoto.com/id/466367844/photo/clothes-make-running.jpg?s=612x612&w=0&k=20&c=eGOSP7X2MoXpGKhv8a3UlYHplvKvIIdUPmVKBSd3bMI=");
+  background-size: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  animation-delay: calc(3 * var(--stagger-delay));
+}
+
+.card:nth-child(3) {
+  grid-area: Gear3;
+  background: url("https://hips.hearstapps.com/hmg-prod/images/running-socks-1563200999.jpg?crop=1.00xw:0.889xh;0,0.111xh&resize=1200:*");
+  background-size: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  animation-delay: calc(5 * var(--stagger-delay));
+}
+
+.card:nth-child(4) {
+  grid-area: Gear4;
+  background: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-gps-running-watches-refresh-lead-1665522594.jpg?crop=1xw:1xh;center,top&resize=1200:*");
+  background-size: 100%;
+  animation-delay: calc(4 * var(--stagger-delay));
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  background-size: 115%;
+  transition-duration: 0.4s;
+}
+
+/*NAV PAGE*/
+/*Media Queries*/
+@media (max-width: 1000px) {}
+
+@media (max-width : 800px) {
+  .card {
+    background-size: cover !important;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  .center {
+    width: 80vw;
+  }
+
+  .page {
+    z-index: 0 !important !important;
+    transform: translateX(0) translateY(0) !important;
+  }
+
+  .circle {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0%;
+    left: 0;
+    top: 0;
+  }
+
+  .expand {
+    display: initial;
+  }
+
+  .shoePage h3 {
+    margin-top: 9rem;
+  }
+
+  .socksPage h3 {
+    margin-top: 10rem;
+  }
+
+  .socksPage img {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .clothesText {
+    padding-bottom: 2rem;
+    height: 17.5rem;
+    width: 20rem;
+    bottom: 10rem;
+  }
+
+  .grid {
+    height: 90vh;
+    width: 100vw;
+    display: grid;
+    gap: 0;
+    grid-template-areas:
+      'Gear1''Gear2'
+      'Gear3''Gear4';
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    --stagger-delay: 130ms;
+  }
+
+  .card {
+    width: 100vw;
+  }
+
+  .accessoriesCard {
+    display: none;
+  }
+
+  .center {
+    display: none;
+  }
+}

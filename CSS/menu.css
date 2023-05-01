@@ -1,0 +1,306 @@
+:root {
+  font-size: 16px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
+#top-bar {
+  top : 0;
+  padding-top : 8px;
+  width : 99%;
+  display : flex;
+  flex-direction : row;
+  position: fixed;
+  border-bottom: solid;
+  color: rgb(220, 214, 214);
+  border-width: 1px;
+  border-radius: 100px;
+  z-index: 25;
+  align-items : center;
+  justify-content : center;
+}
+
+#top-bar.solid {
+  background-color: rgb(20, 20, 20);
+  border-radius: 0;
+  padding-top : 3px;
+  padding-left : 0;
+}
+
+.pages {
+  display : flex;
+  justify-content : center;
+  flex : 1;
+  color: white;
+  font-size: 2.3rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding : 0.5rem 0 0.5rem 0;
+}
+
+@media (max-width: 1400px) {
+  .pages {
+    padding : 3px 0 3px;
+  }
+}
+
+#smallLogo {
+  position: relative;
+  top: 0.4rem;
+  height: 2.7rem;
+  margin-right: 9px;
+  border-radius : 50%;
+}
+
+#title a:hover #smallLogo {
+  animation : spin2 2.4s infinite;
+}
+
+#logo {
+  position : absolute;
+}
+
+#runnerLogo {
+  position : absolute;
+  left : 15%; 
+  top : 26%;
+}
+
+#logo:hover #logoRing {
+  animation : spin2 2.4s infinite;
+}
+
+@keyframes spin2 {
+  0% {
+    transform : rotate(0deg);
+  }
+  10% {
+    transform : rotate(0deg);
+  }
+  35% {
+    transform : rotate(240deg);
+  }
+  60% {
+    transform : rotate(700deg);
+  }
+}
+
+.active {
+  border-bottom: solid;
+  border-width: 2px;
+  border-radius: 2px;
+  color : white;
+  text-shadow: 0 0 6px white;
+}
+
+#top-bar div a {
+  color: white;
+  margin-top: 8px;
+  font-size: 2.3rem;
+  font-weight: ;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#pages {
+  display : flex;
+  flex : 4;
+}
+
+#caron {
+  height : 30% !important;
+  position : relative;
+  left : 8px;
+  transform : translateY(60%);
+}
+
+#title {
+  display : flex;
+  flex : 4.5;
+  color: white;
+}
+
+#title a {
+  color: white;
+  font-size: 2.8rem !important;
+  font-weight: bolder !important;
+  text-decoration: none;
+  margin-top: 0 !important;
+  margin-left : 3%;
+  font-family: 'Playfair Display', serif;
+}
+
+#top-bar a:hover {
+  background-color: transparent;
+  transition-duration: 500ms;
+  text-shadow: 0px 0px 20px white;
+}
+
+span {
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+  flex : 1;
+  text-align : center;
+}
+
+span ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+span ul li {
+  display: inline-block;
+  position: relative;
+}
+
+span ul li:hover>ul {
+  display: block;
+}
+
+span ul li ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  transform  :translateY(-0.5rem);
+  margin-top : 0rem;
+  padding: 0 10% 5% 10%;
+  width : 80%;
+  background : linear-gradient(180deg, transparent 5%, rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+  border-width : 1px;
+  border-style : none solid solid solid;
+  border-left-color : linear-gradient(to bottom, transparent, black);
+  border-image: linear-gradient(180deg, rgba(0,0,0,0) 5%, #ccc, #ccc) 1;
+  z-index : 100;
+}
+
+span ul li ul a:hover {
+  background : linear-gradient();
+}
+
+span ul li ul li {
+  display: block;
+  border-bottom : 0.01px solid rgb(155, 155, 155);
+}
+
+/*Menu for the collapse*/
+
+#second {
+  display: none;
+  background-color: black;
+  z-index : 1000;
+}
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 33px 9%;
+  background: transparent;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+.navlist {
+  display: flex;
+}
+
+.navlist a {
+  color: white;
+  margin-left: 60px;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all .55s ease;
+}
+
+.navlist a:hover {
+  border-bottom: 2px solid white
+}
+
+#menu-icons {
+  color: white;
+  font-size: 35px;
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 750px) {
+  :root {
+    font-size : 12px;
+  }
+
+  #first {
+    display: none;
+  }
+  #second {
+    display: flex;
+  }
+  header {
+    padding: 15px 0  0 2rem;
+    transition: .2s;
+  }
+  
+  .logo {
+    font-size : 2.3rem !important;
+    text-decoration : none;
+    margin-left : 0.5rem;
+  }    
+
+  #menu-icons {
+    display: inline;
+    margin-right : 1rem;
+  }
+  .navlist li {
+    list-style: none;
+  }
+
+  .navlist li a {
+    text-decoration : none;
+    margin : 0.5rem;
+  }
+
+  .inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navlist {
+    position: absolute;
+    top: 99%;
+    right: -200%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all .55s ease;
+  }
+
+  .navlist li {
+    margin : 0.5rem 0 0.5rem 0;
+  }
+
+  .navlist a {
+    margin-left: 0;
+    display: block;
+  }
+
+  .navlist.open {
+    right: 0;
+    margin : 0;
+    padding : 0;
+  }
+}

@@ -1,0 +1,12 @@
+body {
+    background: whitesmoke;
+}
+table {
+    width: 90vw;
+}
+td {
+    background: wheat;
+}
+th {
+    background: white;
+}

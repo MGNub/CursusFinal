@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursus</title>
+    <link rel="icon" href="/Images/logo3.png">
+    <link rel="stylesheet" href="/CSS/routes.css">
+    <link rel="stylesheet" href="/CSS/menu.css">
+    <!---boxicons link--->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!---remixicons link--->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+<div id = "fade"></div>
+
+<!--Navigation Bar-->
+<div id="first">
+    <div id="top-bar">
+        <div id = "title"><a href="index.html"><img id="smallLogo" src="/Images/logo3.png">Cursus</a></div>
+            <div id = "pages">
+                <a href="index.html" class = "pages">Home</a>
+                <a href="running.html" class = "pages">Running</a>
+                    <span>
+                        <ul>
+                            <li><a class = "active pages">Explore</a>
+                                <ul>
+                                    <br>
+                                    <li><a href="routes.html">Routes</a></li>
+                                    <li><a href="clubs.html">Clubs</a></li>
+                                    <li><a href="gear.html">Gear</a></li>
+                                    <li><a href="events.html">Events</a></li>   
+                                </ul>
+                            </li>
+                        </ul>
+                    </span>
+            </div>
+    </div>
+</div>
+<!--Navigation Bar-->
+
+<!--Navigation Bar for Mobile Users-->
+    <header id="second">
+        <div class="inline">
+            <a href="/HTML/index.html" class="logo"><img id="smallLogo" src="/Images/logo3.png">Cursus</a>
+        </div>
+        <ul class="navlist">
+            <li><a href="/HTML/index.html">Home</a></li>
+            <li><a href="/HTML/running.html">Running</a></li>
+            <li><a href="/HTML/routes.html">Routes</a></li>
+            <li><a href="/HTML/clubs.html">Clubs</a></li>
+            <li><a href="/HTML/events.html">Events</a></li>
+            <li><a href="/HTML/gear.html">Gear</a></li>
+        </ul>
+        <div class="inline">
+            <div class="bx bx-menu" id="menu-icons"></div>
+        </div>
+    </header>
+<!--Navigation Bar for Mobile Users-->
+
+
+    <div id="routes">
+
+        <div class="route" id="route1">
+            <div class = "text text0">
+                <h2>Routes</h2>
+                <p>Here you will find some of the most popular running spots in Philadelphia. Jump in with the vast community of runners and scroll through the several places they run at. Click for Location.</p>
+            </div>
+        </div>
+        <div class="route next" id="route2">
+            <div class = "text text1">
+                <h2>Schuylkill River Trail</h2>
+                <p>From South Street Bridge, taking the ramp down onto the boardwalk. Continuing along the path to behind the Philadelphia Art Museum closing on 1.6 miles.</p>
+            </div>
+        </div>
+        <div class="route next" id="route3">
+            <div class = "text text2">
+                <h2>Boxer's Trail</h2>
+                <p>Home to the once-training grounds of famous boxers, Muhammed Ali and Joe Frazier. It will certainly provide the fighting spirit you need for a great run!</p>
+            </div>
+        </div>
+        <div class="route next" id="route4">
+            <div class = "text text3">
+                <h2>Ben Franklin Bridge</h2>
+                <p>The walkway is a 1.5-mile-long pedestrian and bike path that runs along the bridge and offers stunning views of the Delaware River and the Philadelphia skyline.</p>
+            </div>
+        </div>
+        <div class="route next" id="route5">
+            <div class = "text text4">
+                <h2>Bartram's Garden</h2>
+                <p>A 45-acre public park along the Schuylkill River that features gardens, trails, and meadows. Runners can enjoy several paved and unpaved trails that wind through the park's meadows and gardens, providing a peaceful and scenic escape from the city.</p>
+            </div>
+        </div>
+        <div class="route next" id="route6">
+            <div class = "text text5">
+                <h2>FDR Park</h2>
+                <p>The park offers several trails that wind through wooded areas and provide stunning views of the Philadelphia skyline, making it an ideal place to find respite from the city and appreciate the beauty of the natural world.</p>
+            </div>
+        </div>
+        <div class="route next" id="route7">
+            <div class = "text text6">
+                <h2>Kelly Drive</h2>
+                <p>The Kelly Drive is one of Philly's most popular running and biking trail. It is a nearly 9-mile lap that hugs the Schuylkill River. The lovely scenery of Kelly Drive; dependent on the season include weeping cherry trees with beautiful pink blooms.</p>
+            </div>
+        </div>
+        <div class="route next" id="route8">
+            <div class = "text text7">
+                <h2>Belmont Plateau</h2>
+                <p>The park offers several trails that wind through wooded areas and provide stunning views of the Philadelphia skyline, making it an ideal place to retreat from the urban landscape and immerse oneself in nature.</p>
+            </div>
+        </div>
+
+        <!--Fading Transitions-->
+    <div id="fade1" class="fades"></div>
+    <div id="fade2" class="fades"></div>
+    <div id="fade3" class="fades"></div>
+    <div id="fade4" class="fades"></div>
+    <div id="fade5" class="fades"></div>
+    <div id="fade6" class="fades"></div>
+    <div id="fade7" class="fades"></div>
+    <div id="fade8" class="fades"></div>
+<!--Fading Transitions-->
+
+    </div>
+        
+<!--arrow-->
+<div id = "bottomFade">
+
+    <div id = "dragText">&lt Drag &gt</div>
+
+    <div id = "arrow">
+
+        <img id = "arrow1" src = "/Images/arrowTip.png" draggable = "false">
+
+        <svg class = "line line1" width="310" height="3" viewBox="0 0 310 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L309 1" stroke="white" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+
+        <svg id = "crystal" width="165" height="101" viewBox="0 0 225 137" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M43 68.6515L113.477 43" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <path d="M42.6889 69.4563L113.166 95.1078" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <path d="M113.311 43L183.788 68.6515" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <path d="M113 95.1078L183.477 69.4563" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+
+        <svg class = "line line2" width="310" height="3" viewBox="0 0 310 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L309 1" stroke="white" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+
+        <img id = "arrow2" src = "/Images/arrowTip.png" draggable = "false">
+
+    </div>
+</div>
+<!--arrow-->
+
+
+<script src = "/JAVASCRIPT/routes.js"></script>
+<script src = "/JAVASCRIPT/menu.js"></script>
+</body>
+</html>

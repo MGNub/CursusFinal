@@ -1,0 +1,332 @@
+:root {
+  --bg-color : rgb(10, 10, 10);
+  --card-color : rgb(23, 23, 23);
+}
+
+body {
+  background-color : var(--bg-color);
+}
+
+div {
+  color : white;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width : 5px;
+  background-color : rgb(20, 20, 20);
+}
+
+::-webkit-scrollbar-thumb {
+  background : rgb(105, 105, 105);
+  border-radius : 100px;
+}
+
+#top-bar {
+  transform : translateY(-5rem);
+  -webkit-animation : in 500ms;
+  background-color : var(--bg-color);
+}
+
+#arrowContainer {
+  height : 4rem;
+  width : 100vw;
+  background-color : transparent;
+  position : fixed;
+  margin : 0;
+  top : 4rem;
+}
+
+#show-menu {
+  position : fixed;
+  height : 2.5rem;
+  background-color : transparent;
+  border-radius : 50%;
+  padding : 1.1rem 0.2rem 1.1rem 0.2rem;
+  z-index : 2;
+  left : 50%;
+  top : 5rem;
+  transform : translateX(-50%);
+}
+
+#top-bar:hover {
+  transform : translateY(0);
+  transition-duration : 500ms;
+  -webkit-animation : out 500ms;
+}
+
+#top-bar:hover #show-menu {
+  transform : rotate(180deg) translateX(50%) translateY(5rem);
+  opacity : 0;
+  transition-duration : 500ms;
+}
+
+@-webkit-keyframes in {
+  from{-webkit-transform : translateY(0rem); pointer-events : none;}
+  to{-webkit-transform : translateY(-5rem); pointer-events : none;}
+}
+
+@-webkit-keyframes out {
+  from{-webkit-transform : translateY(-5rem);}
+  to{-webkit-transform : translateY(0);}
+}
+
+#introCard {
+  position : absolute;
+  background : url("https://photos-images.active.com/file/3/1/original/81/e8/81e86557-e999-4e02-8ceb-21a86cd0c4bb.jpg");
+  background-size : 180%;
+  background-blend-mode : overlay;
+  background-color : rgba(0, 0, 0, 0.1);
+  top : 5rem;
+  height : 35rem;
+  width : 70rem;
+  border-radius : 30px;
+  background-position : center;
+  border : 2px solid rgb(75, 75, 75);
+  -webkit-animation : in2 800ms;
+}
+
+#introImage {
+  position : absolute;
+  height : 100%;
+  left : 50%;
+  transform : translateX(-50%);
+}
+
+#introDesc {
+  position : relative;
+  top : -2rem;
+  padding-top : 1rem;
+  background : linear-gradient(to right, transparent, rgba(0, 0, 0, 0.7), transparent);
+  padding-bottom : 100%;
+}
+
+h1 {
+  position : relative;
+  left : 50%;
+  transform : translateX(-50%);
+  width : 35rem;
+  font-size : 3rem;
+  text-align : center;
+  border-bottom : 1px solid rgb(255, 255, 255);
+}
+
+#introCard p {
+  position : relative;
+  left : 50%;
+  transform : translateX(-50%);
+  text-align : center;
+  font-size : 1.2rem;
+  width : 80%;
+  margin-bottom : 8rem;
+}
+
+#introCard:hover {
+  transition-duration : 800ms;
+  background-color : rgba(0, 0, 0, 0.35);
+  background-size : 100%;
+  background-position : center;
+  -webkit-animation : out2 800ms;
+}
+
+@-webkit-keyframes in2 {
+  from{
+    background-color : rgba(0, 0, 0, 0.35);
+    background-size : 100%;
+    background-position : center;
+  }
+  to{background-size : 180%;}
+}
+  @-webkit-keyframes out2 {
+  from{background-size : 180%;}
+  to{background-size : 100%;}
+}
+
+.column {
+  position : relative;
+  align-items : center;
+  padding : 5px;
+  height : fit-content;
+  width : fit-content;
+  top : 8rem;
+  left : 0rem;
+  background-color : transparent;
+  z-index : 1;
+  margin : 0 2rem 0 2rem;
+}
+
+#cards {
+  position : relative;
+  top : 42rem;
+  display : flex;
+  flex-wrap : wrap;
+  justify-content : center;
+  gap : 2rem;
+  max-width : 72rem;
+  width : calc(100% - 1.25rem);
+  z-index : 1;
+}
+
+#cards:hover > .card > .card-border {
+  opacity : 1;
+}
+
+.card {
+  position : relative;
+  background-color : rgba(255, 255, 255, 0.02);
+  border : 1px solid rgba(255, 255, 255, 0.1);
+  height : 15rem;
+  width : 22rem;
+  border-radius : 10px;
+}
+
+.card:hover::before {
+  opacity : 1;
+}
+
+.card::before, .card > .card-border {
+  border-radius : inherit;
+  content : "";
+  position : absolute;
+  top : 0px;
+  left : 0px;
+  height : 100%;
+  width : 100%;
+  opacity : 0;
+  transition : opacity 500ms;
+}
+
+.card::before{
+  background : radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%);
+  z-index : 3;
+}
+
+.card > .card-border {
+  background : radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.4), transparent 40%);
+  z-index : 1;
+}
+
+.card > .card-content {
+  position : relative;
+  background-color: var(--card-color);
+  border-radius : inherit;
+  height : calc(100% - 2px);
+  width : calc(100% - 2px);
+  margin : 1px;
+  z-index : 2;
+}
+
+.card p {
+  position : absolute;
+}
+
+.header {
+  position : relative;
+  display : flex;
+  justify-content : center;
+  width : 100%;
+}
+
+.card-image {
+  position : absolute;
+  width : 2.8rem;
+  filter: opacity(0.9);
+  top : 1rem;
+  left : 1rem;
+}
+
+.race {
+  position : relative;
+  font-weight : bold;
+  font-size : 1.5rem;
+}
+
+.corner {
+  position : absolute;
+  top : 1rem;
+  right : 1rem;
+  height : 2rem;
+  width : 2rem;
+  border-top-right-radius : 30%;
+  border : 2px solid;
+  border-color : white white transparent transparent;
+}
+
+.row2 {
+  position : relative;
+  top : 4.5rem;
+  margin : 0 2rem 0 2rem;
+  border : 1px solid rgb(170, 170, 170);
+}
+
+.date {
+  top : -1rem;
+  font-size : 2rem;
+}
+
+.distance {
+  top : -1rem;
+  right : 0;
+  font-size : 2rem;
+}
+
+.desc {
+  top : 2rem;
+  margin : 1rem;
+}
+
+/*Media Queries*/
+@media (max-width: 1150px) {
+  #introCard {
+    height : 25rem;
+    width : 50rem;
+  }
+  #introCard p {
+    margin-bottom : 5rem;
+  }
+  #cards {
+    top: 33rem;
+  }
+}
+
+@media (max-width: 850px) {
+  #introCard {
+    height : 20rem;
+    width : 40rem;
+  }
+  #introCard p {
+    font-size: 1.1rem;
+    margin-bottom : 3rem;
+  }
+  #introDesc {
+    padding-bottom: 0 !important;
+  }
+  #cards {
+    top : 30rem;
+  }
+}
+
+@media (max-width: 720px) {
+  #introCard {
+    height: 17rem;
+    width: 34rem;
+  }
+  #introCard h1 {
+    font-size: 2rem;
+  }
+  #introCard p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  #cards {
+    top: 22rem;
+  }
+  h1 {
+  width : 25rem;
+  border-bottom : 1px solid rgb(255, 255, 255);
+}
+}
