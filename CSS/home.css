@@ -138,6 +138,7 @@ h1 div {
   align-items : center;
   margin-right: 15px;
   animation : spin2 1.7s;
+  border-radius : 50%;
 }
 
 h1 div:hover {
