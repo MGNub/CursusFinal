@@ -190,7 +190,7 @@ span ul li ul li {
 #second {
   display: none;
   background-color: black;
-  z-index : 1000;
+  z-index : 10000;
 }
 header {
   position: fixed;
