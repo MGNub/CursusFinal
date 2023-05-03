@@ -25,7 +25,7 @@ window.addEventListener('scroll', () => {
 //Explore Routes button
 
 function routes() {
-    location.href = "https://github.com/MGNub/CursusFinal/HTML/routes.html";
+    location.href = "https://mgnub.github.io/CursusFinal/HTML/routes.html";
 }
 
 const routeBtn = document.querySelector('#btn');

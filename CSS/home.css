@@ -57,6 +57,7 @@ body {
     left : 50%;
     transform : translateX(-100%) translateY(-45%);
     opacity : 0;
+    pointer-events : none;
   }
   10% {
     transform : translateX(-55%) translateY(-45%);
@@ -70,6 +71,9 @@ body {
   }
   50% {
     transform : translateX(-60%) translateY(-45%);
+  }
+  100% {
+    pointer-events : none;
   }
 }
 
@@ -124,25 +128,51 @@ p {
   margin : 0 0 2rem;
 }
 
+h1 div {
+  padding : 0;
+  margin : 0;
+  height : fit-content;
+  width : fit-content;
+  display : flex;
+  justify-content : center;
+  align-items : center;
+  margin-right: 15px;
+  animation : spin2 1.7s;
+  border-radius : 50%;
+  background-color : rgb(20, 20, 20);
+}
+
+h1 div:hover {
+  animation : spin2 1s infinite;
+}
+
+@keyframes spin2 {
+  0% {
+    transform : rotate(0deg);
+  }
+  100% {
+    transform : rotate(360deg);
+  }
+}
+
 #bigLogo {
   position: relative;
   height: 60px;
-  margin-right: 20px;
   animation : logoLoad 5s;
-}
-
-#bigLogo:hover {
-  
 }
 
 @keyframes logoLoad {
   0% {
     height : 130px;
+    pointer-events : none;
 
   }
   50% {
     height : 130px;
-
+    pointer-events : none;
+  }
+  100% {
+    pointer-events : none;
   }
 }
 
@@ -163,7 +193,7 @@ p {
   position: relative;
   top: 0;
   padding: 25px 80px 25px 80px;
-  background-color: rgb(224, 228, 0);
+  background : linear-gradient(to right, rgb(224, 228, 0), rgb(214, 111, 0), rgb(223, 140, 16), rgb(224, 228, 0) 95%);
   border-radius : 40px;
   border : solid;
   border-width : 4px;
@@ -172,15 +202,43 @@ p {
   font-weight : bolder;
   box-shadow : 0px 3px 8px rgb(181, 201, 2);
   cursor : pointer;
+  transition : all 0.7s ease-in-out;
+  background-size: 200% 100%;
 }
 
 #join:hover {
-  background-color : yellow;
-  transition : 0.3s;
+  background-position : 100% 0;
+}
+
+#join p {
+  padding : 0;
+  margin : 0;
+  height : fit-content;
+  width : fit-content;
+  font-weight : 600;
+  color : rgb(72, 29, 0);
+}
+
+#join:hover p {
+  animation : btn 0.7s;
 }
 
 @keyframes btn {
-  
+  0% {
+    transform : translateY(0)
+  }
+  33% {
+    color : red;
+  }
+  40% {
+    transform : translateY(-100%);
+    opacity : 0;
+    color : red;
+  }
+  45% {
+    transform : translateY(100%);
+    opacity : 0;
+  }
 }
 
 #fade {
@@ -278,35 +336,3 @@ video {
   }
 
 }
-
-/*mouseshadow*/
-#area {
-    position : absolute;
-    background-color : red;
-    height : 300px;
-    aspect-ratio : 1;
-    left : 50%;
-    top : 50%;
-    translate : -50% -50%;
-    border-radius : 50%;
-    background : linear-gradient(to right, aquamarine, mediumpurple);
-    animation : rotate 20s infinite;
-    filter : blur(200px);
-    z-index : 101;
-    pointer-events : none;
-
-    @keyframes rotate {
-        from {
-            rotate : 0deg;
-        }
-
-        50% {
-            scale : 1 1.5;
-        }
-
-        to {
-            rotate : 360deg;
-        }
-    }
-}
-
