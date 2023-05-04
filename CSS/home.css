@@ -11,14 +11,14 @@ body {
   background-color : black;
   z-index : 2;
   transform : translateY(-100%);
-  animation : coverLoad 3s;
+  animation : coverLoad 3.2s;
 }
 
 @keyframes coverLoad {
   0% {
     transform : translateY(0);
   }
-  40% {
+  80% {
     transform : translateY(0);
   }
 }
